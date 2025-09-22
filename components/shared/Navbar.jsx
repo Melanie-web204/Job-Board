@@ -23,7 +23,7 @@ const Navbar = () => {
             <h1 className="text-black font-semibold uppercase text-xl">TalentCove</h1>
 
             <MdAdsClick
-            className="text-blue-600 text-3xl" />
+            className="text-purple-600 text-3xl" />
            </div>
            </Link>
 
@@ -37,6 +37,25 @@ const Navbar = () => {
             <Link href={"/create"}>
             <Button>Post a Job</Button>
             </Link>
+
+            <div className="md:hidden text-3xl cursor-pointer text-black"
+            onClick={handleOpenMoblieMenu}>
+
+                {openMoblieMenu ? <MdClose/> : <FiMenu/>}
+                 </div>
+
+                 {openMoblieMenu && (
+                    <ul className="md:hidden bg-purple-500 absolute top-15 right-5 px-4 py-6 text-center
+                     text-white rounded-md flex flex-col gap-3 shadow-md">
+                        {navLinks.map((link, index) =>
+                            (<Link href={link.route} 
+                            key={index}
+                            onClick={() => setOpenMobileMenu (false)}
+                            >
+                            <li>{link.name}</li>
+                             </Link>))}
+                     </ul>
+                 )}
             
         </div>
         </div>

@@ -1,8 +1,10 @@
+import HeroSection from "@/components/shared/HeroSection";
+
 const Home = () => {
   return (
-    <div>
-      <h1></h1>
-    </div>
+   <>
+     <HeroSection/>
+   </>
   )
 }
 
