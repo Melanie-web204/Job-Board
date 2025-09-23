@@ -22,6 +22,7 @@ const HeroSection = () => {
                     your journey toward success today.</div>
                  </span>
                  </div>
+                 SearchJob
 
         </div>
       </div>
